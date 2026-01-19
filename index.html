@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Socket.IO Test</title>
+</head>
+<body>
+  <h1>Socket.IO Client</h1>
+  <button id="send">Send Message</button>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    socket.on("connect", () => {
+      console.log("Connected:", socket.id);
+    });
+
+    socket.on("message", (msg) => {
+      console.log("Server says:", msg);
+    });
+
+    document.getElementById("send").onclick = () => {
+      socket.emit("message", "Hello from client!");
+    };
+  </script>
+</body>
+</html>
+
