@@ -1,6 +1,6 @@
 image:
   repository: smeleshchyk/socketio-test
-  tag: "0.0.2"
+  tag: "0.0.1"
   pullPolicy: IfNotPresent
 
 service:
