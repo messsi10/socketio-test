@@ -21,4 +21,7 @@ spec:
           env:
             - name: NODE_ENV
               value: "production"
+            {{- with .Values.extraEnv }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
 

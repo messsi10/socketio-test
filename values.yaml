@@ -1,6 +1,6 @@
 image:
   repository: smeleshchyk/socketio-test
-  tag: "0.0.1"
+  tag: "0.0.2"
   pullPolicy: IfNotPresent
 
 service:
@@ -9,4 +9,15 @@ service:
   nodePort: 30080
 
 replicaCount: 1
+
+# Extra environment variables for the container
+# Example:
+# extraEnv:
+#   - name: API_URL
+#     value: "https://example.com"
+extraEnv:
+  - name: TEST__LOGIN_VAR
+    value: "login"
+  - name: TEST_PASSWORD_VAR
+    value: "password"
 
