@@ -16,7 +16,7 @@ replicaCount: 1
 #   - name: API_URL
 #     value: "https://example.com"
 extraEnv:
-  - name: DEFAULT_TEST__LOGIN_VAR
+  - name: DEFAULT_TEST_LOGIN_VAR
     value: "login"
   - name: DEFAULT_TEST_PASSWORD_VAR
     value: "password"
